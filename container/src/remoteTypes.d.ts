@@ -11,3 +11,9 @@ declare module "app2/CounterAppTwo" {
 
 	export default CounterAppTwo;
 }
+
+declare module "app2/Cakes" {
+	const Cakes: React.ComponentType;
+
+	export default Cakes;
+}

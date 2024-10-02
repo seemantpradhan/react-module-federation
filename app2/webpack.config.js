@@ -30,8 +30,9 @@ module.exports = {
       name: "app2",
       filename: "remoteEntry.js",
       exposes: {
-        // expose each component
+        // expose each component  
         "./CounterAppTwo": "./src/components/CounterAppTwo",
+        "./Cakes": "./src/components/Cakes",
       },
       shared: {
         ...deps,
@@ -46,6 +47,9 @@ module.exports = {
           eager: true,
           requiredVersion: deps["react-router-dom"],
         },
+        "react-redux": { singleton: true, eager: true, requiredVersion: false },
+        "@reduxjs/toolkit": { singleton: true, eager: true, requiredVersion: false },
+
       },
     }),
     new HtmlWebpackPlugin({
